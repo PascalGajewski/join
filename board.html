@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" id="board-html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/style-board.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/side-bar.css" />
+    <link rel="stylesheet" href="./styles/style-media-header.css" />
+    <link rel="stylesheet" href="./styles/style-media-side-bar.css" />
+    <link rel="stylesheet" href="./styles/style-media-add-task.css" />
+    <link rel="stylesheet" href="./styles/style-media-contacts.css" />
+    <link rel="stylesheet" href="./styles/style-add-task.css" />
+    <link rel="stylesheet" href="./styles/style-contacts.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./assets/img/side-bar-join-logo.svg"
+    />
+    <title>Board | Join</title>
+    <script src="./mini_backend.js"></script>
+    <script src="./script/app.js"></script>
+    <script src="./script/add-task.js"></script>
+    <script src="./script/add-task-clear-create.js"></script>
+    <script src="./script/contacts.js"></script>
+    <script src="./script/add-task-template.js"></script>
+    <script src="./script/contacts-templates.js"></script>
+    <script src="./script/board.js"></script>
+    <script src="./script/board-template-add-task.js"></script>
+    <script src="./script/board-template-open-task.js"></script>
+  </head>
+
+  <body onload="renderTasks()">
+    <div w3-include-html="./assets/templates/header-template.html"></div>
+    <div w3-include-html="./assets/templates/side-bar-template.html"></div>
+    <div class="board-main-container">
+      <!-- Include hidden Template Add Task -->
+      <div id="board-add-task" class="d-none">
+        <div class="board-add-task-overlay" onclick="closeAddTaskPopup()">
+          <div
+            class="board-add-task fadeInRightAlways"
+            onclick="doNotClose(event)"
+          >
+            <img
+              class="board-add-task-close"
+              onclick="boardCloseAddTask()"
+              src="./assets/img/icons/contacs-x.svg"
+              onclick="boardCloseAddTask()"
+              alt="X"
+            />
+            <div
+              class="contacts-include-tasks"
+              w3-include-html="./assets/templates/task-template.html"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <!-- Include hidden Template Open Task -->
+      <div
+        id="board-open-task"
+        class="board-open-task d-none"
+        onclick="closeOpenTaskPopup()"
+      ></div>
+      <!--Visible Content of Board-->
+      <div class="board-content" id="board-content">
+        <div class="board-header-bar">
+          <div class="board-responsive-headline">
+            <h1>Board</h1>
+            <a
+              onclick="boardOpenAddTask('to-do'), initAddTask()"
+              class="w3-button btn-dark-grey w3-round-large w3-hover-blue btn-text-center btn-mobile"
+              >+</a
+            >
+          </div>
+          <div class="board-header-input">
+            <input
+              id="board-task-search"
+              onkeyup="boardFilterTasks()"
+              type="text"
+              placeholder="Find task"
+              class="input-field find-task"
+            />
+            <a
+              onclick="boardOpenAddTask('to-do'), initAddTask()"
+              class="w3-button btn-dark-grey w3-round-large w3-hover-blue btn-text-center btn-normal"
+              >Add task +</a
+            >
+          </div>
+        </div>
+        <div class="board-content-container">
+          <div class="board-box">
+            <div class="board-box-header">
+              <h4>To do</h4>
+              <img
+                class="plus-btn"
+                onclick="boardOpenAddTask('to-do'), initAddTask()"
+                src="./assets/img/icons/board-plus.svg"
+              />
+            </div>
+            <div
+              class="box-content"
+              id="to-do"
+              ondrop="moveTo('to-do'),removeHighlight('to-do')"
+              ondragleave="removeHighlight('to-do')"
+              ondragover="allowDrop(event); highlight('to-do')"
+            ></div>
+          </div>
+          <div class="board-box">
+            <div class="board-box-header">
+              <h4>In progress</h4>
+              <img
+                class="plus-btn"
+                onclick="boardOpenAddTask('in-progress'), initAddTask()"
+                src="./assets/img/icons/board-plus.svg"
+              />
+            </div>
+            <div
+              class="box-content"
+              id="in-progress"
+              ondrop="moveTo('in-progress'), removeHighlight('in-progress')"
+              ondragleave="removeHighlight('in-progress')"
+              ondragover="allowDrop(event); highlight('in-progress')"
+            ></div>
+          </div>
+          <div class="board-box">
+            <div class="board-box-header">
+              <h4>Awaiting Feedback</h4>
+              <img
+                class="plus-btn"
+                onclick="boardOpenAddTask('awaiting-feedback'), initAddTask()"
+                src="./assets/img/icons/board-plus.svg"
+              />
+            </div>
+            <div
+              class="box-content"
+              id="awaiting-feedback"
+              ondrop="moveTo('awaiting-feedback'), removeHighlight('awaiting-feedback')"
+              ondragleave="removeHighlight('awaiting-feedback')"
+              ondragover="allowDrop(event); highlight('awaiting-feedback')"
+            ></div>
+          </div>
+          <div class="board-box">
+            <div class="board-box-header">
+              <h4>Done</h4>
+              <img
+                class="plus-btn"
+                onclick="boardOpenAddTask('done'), initAddTask()"
+                src="./assets/img/icons/board-plus.svg"
+              />
+            </div>
+            <div
+              class="box-content"
+              id="done"
+              ondrop="moveTo('done'), removeHighlight('done')"
+              ondragleave="removeHighlight('done')"
+              ondragover="allowDrop(event); highlight('done')"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

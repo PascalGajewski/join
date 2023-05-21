@@ -1,0 +1,91 @@
+/* css - classes for help.html and legal-notice-html*/
+
+h1{
+    margin-bottom: 48px;
+}
+
+.legal-notice-help-main{
+    margin-left: 347px;
+    margin-right:117px;
+}
+
+.legal-notice-scroll{
+    overflow-x: hidden;
+}
+
+div.help-list {
+    counter-reset: list-number;
+}
+
+div.help-list div:before {
+    counter-increment: list-number;
+    content: counter(list-number);
+}
+
+div.help-list div {
+    margin-left: 35px; /* Gap between number and text */
+    position: relative;
+    margin-bottom: 10px;;
+}
+  
+div.help-list div:before {
+    counter-increment: list-number;
+    content: counter(list-number) ". ";
+    position: absolute;
+    left: -35px; /* Gap between number and text */
+    font-weight:700;
+    font-size:27px;
+}
+
+.legal-notice-link{
+    color: black;
+    cursor: pointer;
+}
+
+
+.legal-notice-help-responsive-top{
+    display:flex;
+    margin-top: 114px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.legal-notice-help-back {
+    cursor: pointer;
+}
+
+h1{
+    margin-top: 19px;
+}
+
+.legal-notice-help-sub-title {
+    display: none;
+}
+
+@media (max-width: 1170px) {
+
+    h1{
+        margin-top: 19px;
+        margin-bottom: 35px;
+    }
+
+    .legal-notice-help-responsive-top{
+        justify-content: space-between;
+    }
+
+    .legal-notice-help-sub-title {
+        display: flex;
+    }
+
+    .legal-notice-help-main{
+        margin-left: 33px;
+        margin-right: 33px;
+        margin-bottom: 150px;
+    }
+
+    .side-bar{
+        z-index:3;
+    }
+
+
+}

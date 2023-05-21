@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/style-login.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./assets/img/side-bar-join-logo.svg"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <title>Login | Join</title>
+    <script src="./mini_backend.js"></script>
+    <script src="./script/app.js"></script>
+    <script src="./script/login.js"></script>
+  </head>
+
+  <body onload="init(), startAnimation(), writeRememberUserMail()">
+    <div class="d-none send-confirm" id="send-signup-before-login-confirm">
+      <span class="w3-round-large">Unknown user! You need to signup first.</span>
+  </div>
+    <div class="login-animation-container" id="login-animation-container">
+      <img id="login-logo" src="./assets/img/icons/join-login.svg" /><img
+        id="login-logo-responsive"
+        src="./assets/img/icons/join-logo-responsive.svg"
+        class="d-none"/>
+    </div>
+    <div class="d-none login-content" id="login-content">
+      <img src="./assets/img/icons/join-login.svg" class="join-logo" />
+      <div class="login-card">
+        <h1>Log in</h1>
+        <div class="underline-headline"></div>
+        <form class="input-bar" onsubmit="loginUser(); return false" autocomplete="on">
+          <input required type="email" class="input-field email w3-round-large" id="useremail" placeholder="Email"/>
+          <span class="d-none" id="login-user-error" style="color: red">User unknown. Please signup first</span>
+          <input required type="password" class="input-field password w3-round-large" id="userpassword" placeholder="Password"/>
+          <div class="detail-bar">
+            <div>
+              <input type="checkbox" id="remember-login" defaultValue="false" style="cursor: pointer"/>
+              <label for="remember-login"> Remember me</label>
+          </div><br />
+            <a href="./forgotten-password.html"> Forgot my password</a>
+          </div>
+          <div class="btn-bar">
+            <input type="submit" class="w3-button btn-dark-grey w3-round-large w3-hover-blue" value="Log in"/>
+            <a onclick="guestLogin()" type="button" class="w3-button btn-transparent w3-round-large w3-hover-blue">
+              Guest Log in</a>
+          </div>
+        </form>
+      </div>
+      <div class="signup-bar">
+        <p>Not a Join user?</p>
+        <a href="./signup.html" class="w3-button btn-dark-grey w3-round-large w3-hover-blue">Sign up</a>
+      </div>
+    </div>
+  </body>
+</html>

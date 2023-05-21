@@ -1,0 +1,36 @@
+<header>
+  <div>
+    <img
+      class="header-logo-small"
+      src="./assets/img/icons/join-login.svg"
+      alt="Join"
+    />
+    <span class="header-titel">Kanban Project Management Tool</span>
+    <div class="header-right">
+      <img
+        class="header-icon"
+        src="./assets/img/icons/header-question-mark.svg"
+        alt="Help"
+        onclick="window.location.href='help.html'"
+      />
+      <div class="header-profile" onclick="toggleShowLogOutArea()">
+        <img
+          id="header-profile-img"
+          src="./assets/img/profile-images/guest.svg"
+        />
+      </div>
+    </div>
+    <div id="header-log-out" class="header-log-out header-d-none">
+      <div class="header-help" onclick="window.location.href='help.html'">
+        Help
+      </div>
+      <div
+        class="header-legalnotice"
+        onclick="window.location.href='legal-notice.html'"
+      >
+        Legal notice
+      </div>
+      <div class="header-log" onclick="logout()">Log out</div>
+    </div>
+  </div>
+</header>

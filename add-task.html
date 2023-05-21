@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/style-summary.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/side-bar.css">
+    <link rel="stylesheet" href="./styles/style-add-task.css">
+    <link rel="stylesheet" href="./styles/style-media-add-task.css">
+    <link rel="stylesheet" href="./styles/style-media-header.css">
+    <link rel="stylesheet" href="./styles/style-media-side-bar.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/side-bar-join-logo.svg">
+    <script src="./mini_backend.js"></script>
+    <script src="./script/app.js"></script>
+    <script src="./script/add-task-template.js"></script>
+    <script src="./script/add-task.js"></script>
+    <script src="./script/add-task-clear-create.js"></script>
+
+    <title>Add Task | Join</title>
+</head>
+
+<body onload="initAddTask()">
+    <div w3-include-html="./assets/templates/header-template.html"></div>
+    <div w3-include-html="./assets/templates/side-bar-template.html"></div>
+
+    <div class="add-task-main-content">
+        <div class="add-task-media">
+            <div class="add-task-media-kanban">Kanban Project Management Tool</div>
+            <div class="add-task-headline">Add Task</div>
+            <form onsubmit="validateForm(); return false">
+                <div class="add-task-container">
+                    <!-- Left Side -->
+                    <div class="add-task-leftside">
+                        <div class="add-task-title">
+                            <label for="add-task-input-title">Title</label>
+                            <input id="add-task-input-title" type="text" placeholder="Enter a title" required>
+                        </div>
+
+                        <div class="add-task-description">
+                            <label for="add-task-input-description">Description</label>
+                            <textarea id="add-task-input-description" placeholder="Enter a Description"
+                                required></textarea>
+                        </div>
+
+                        <div class="add-task-category">
+                            <label>Category</label>
+                            <div class="add-task-category-dropdown" id="add-task-category-render">
+                                <!-- Category Render Section -->
+                            </div>
+                            <div class="add-task-new-category-dots" id="add-task-new-category-dots">
+                            </div>
+                            <span id="add-task-new-category-error"></span>
+                        </div>
+
+                        <div class="add-task-assigned">
+                            <label>Assigned to</label>
+                            <div class="add-task-assigned-dropdown" id="add-task-assignedto-render">
+                                <!-- Assigned Render Section -->
+                            </div>
+                            <span id="add-task-assigned-error"></span>
+                            <div class="add-task-assigned-users-main" id="add-task-assigned-users">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mid Greyline -->
+                    <div class="add-task-greyline"></div>
+                    <!-- Right Side -->
+                    <div class="add-task-rightside">
+                        <div class="add-task-due-date" id="add-task-due-date">
+                            <label for="add-task-input-due-date">Due date</label>
+                            <input style="font-family: Inter, sans-serif;" id="add-task-input-due-date" type="date"required>
+                        </div>
+
+                        <div class="add-task-prio">
+                            <label>Prio</label>
+                            <div class="add-task-prio-button-container" id="add-task-priobutton-render">
+                                <!-- Prio-Buttons Render Section -->
+                            </div>
+                            <span id="add-task-prio-button-error"></span>
+                        </div>
+
+                        <div class="add-task-subtask">
+                            <label>Subtask</label>
+                            <div class="add-task-subtask-input-container" id="add-task-subtask-render">
+                                <!-- Subtask TOP Render Section -->
+                            </div>
+                            <span id="add-task-subtask-error"></span>
+                            <div class="add-task-add-subtask" id="add-task-subtask-addtask-render">
+                                <!-- Subtask Add Render Section -->
+                            </div>
+                        </div>
+
+                        <div class="add-task-buttons">
+                            <button id="add-task-clear-button" type="reset" class="add-task-clear"
+                                onclick="clearAddTask()">
+                                Clear
+                                <img class="add-task-clear-img" src="./assets/img/icons/add-task-button-clear.svg"
+                                    alt="cross">
+                                <img class="d-none" src="./assets/img/icons/add-task-button-clear-blue.svg" alt="cross">
+                            </button>
+                            <button class="add-task-create" id="add-task-create-button">
+                                Create Task
+                                <img src="./assets/img/icons/add-task-button-create.svg" alt="check">
+                            </button>
+                            <button class="add-task-create-media" id="add-task-create-button-media">
+                                Create
+                                <img src="./assets/img/icons/add-task-button-create.svg" alt="check">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="add-task-added d-none" id="add-task-added">
+                        <div class="add-task-added-content">
+                            <span>Task added to board</span>
+                            <img src="./assets/img/icons/add-task-added-board.svg" alt="board">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

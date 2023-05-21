@@ -1,0 +1,75 @@
+/* css - classes for side-bar-template.html responsive*/
+@media (max-width: 1170px) {
+
+    #side-bar-legal{
+        display:none;
+    }
+
+    .side-bar{
+        width: 100vw;
+        height: 80px;
+        top: auto;
+        bottom: 0px;
+    } 
+
+    .side-bar-container{
+        padding: 0;
+        align-items: unset; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 8px 0px;
+        gap: 10px;
+        height: 80px;
+        box-sizing: border-box;
+    }
+
+    .side-bar-container > img{
+        display:none;
+        gap: 0;
+    }
+
+    .side-bar-navigation{
+        flex-direction: unset;
+        margin-right: 12px;
+        margin-left:12px;
+        gap: 10px;
+    }
+
+    .side-bar-navigation > div{
+        gap:10px;
+    }
+
+    .side-bar-button{
+        height: 80px;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        padding:0;
+    }
+
+    .side-bar-nav-icon{
+        margin-top:0;
+        margin-bottom: 0;;
+    }
+
+    .side-bar-nav-icon-small{
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 350px) {
+
+    .side-bar-button > span{
+        font-size:14px;
+    }
+    .side-bar-button{
+        font-size:14px;
+    }
+
+    .legal-notice-help-sub-title{
+        font-size: 14px;
+
+    }
+}
+

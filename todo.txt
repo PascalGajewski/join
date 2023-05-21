@@ -1,0 +1,44 @@
+Aktuelle Todos:
+Daniel: -
+Carmen: -
+Pascal: -
+
+
+
+Allgemein: 
+Scrollbalken design (https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp)
+
+
+
+Generelle Infos/Arbeitsanweisung:
+- IDs, Classen etc. mit entsprechenr Prefix der Side benennen     
+    z.B. bei ID für Summery 
+    <div id="summary-task"> ... </div>
+
+
+
+Erledigt: 
+Projektstruktur aufgesetzt - Daniel + Carmen 
+Fonts definiert und eingebunden - Carmen
+GitHub Account erstellt - Carmen
+Summary html css responsive - Daniel
+Login Prozess html und css - Pascal
+Login js - Pascal
+Board html und css - Pascal
+Board Open Task templates und css - Pascal
+Board Logik - Pascal 
+Integration Add-Task in Board - Pascal, Daniel  
+Templates (side-bar + header) responsive  - Carmen
+Help + Legal Notice incl. responsive - Carmen 
+Logik Sidebar - Carmen
+Contacts html, css, (desktop + responsive) - Carmen
+Contacts js - Carmen
+Add Task html css responsive - Daniel
+Add Task js - Daniel
+Cookies - Carmen
+
+Referenzen 
+-> für Tash Icon: 
+<div> Icons made by <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
+
+

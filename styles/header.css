@@ -1,0 +1,84 @@
+/* css - classes for header-template.html */
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 34px;
+  position: absolute;
+  width: 100%;
+  height: 89px;
+  left: 0px;
+  top: 0px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  z-index: 2;
+}
+
+.header-titel {
+  font-size: 21px;
+  margin-left: 348px;
+}
+
+.header-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+  margin-right: 33px;
+}
+
+.header-profile > img {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  border: 3px solid var(--dark-grey);
+  cursor: pointer;
+}
+
+.header-icon {
+  width: 31px;
+  height: 31px;
+  cursor: pointer;
+}
+
+.header-log-out {
+  position: absolute;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  line-height: 120%;
+  cursor: pointer;
+  background: var(--dark-grey);
+  color: white;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px 0px 20px 20px;
+  width: 130px;
+  min-height: 53px;
+  top: 89px;
+  right: 33px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.header-log-out > div {
+  width: calc(130px-18);
+}
+
+.header-log-out > div:hover {
+  background: var(--focus-blue);
+}
+
+.header-logo-small {
+  width: 32px;
+  margin-left: 32px;
+}
+
+.header-d-none {
+  display: none;
+}
+
+#header-profile-img {
+  background: var(--grey);
+}

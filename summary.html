@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/style-summary.css">
+    <link rel="stylesheet" href="./styles/style-media-summary.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/side-bar.css">
+    <link rel="stylesheet" href="./styles/style-media-header.css">
+    <link rel="stylesheet" href="./styles/style-media-side-bar.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/side-bar-join-logo.svg">
+    <script src="./mini_backend.js"></script>
+    <script src="./script/app.js"></script>
+    <script src="./script/summary.js"></script>
+    <title>Summary | Join</title>
+</head>
+
+<body onload="initSummary()" id="summary-body">
+    <div w3-include-html="./assets/templates/header-template.html"></div>
+    <div w3-include-html="./assets/templates/side-bar-template.html"></div>
+
+    <div class="summary-main-container">
+        <div class="summary-media">
+            <div class="summary-media-kanban">Kanban Project Management Tool</div>
+            <div class="summary-header">
+                <div class="summary-headline">Summary</div>
+                <div class="blue-line"></div>
+                <span class="summary-header-sub">Everything in a nutshell!</span>
+            </div>
+
+            <div class="blue-line-media"></div>
+
+            <div class="summary-content">
+                <div class="summary-tasks-general">
+                    <div class="summary-tasks-info">
+                        <div class="summary-tasks" onclick="window.location.href='board.html'">
+                            <div id="summary-task-in-borad">0</div>
+                            <span>Tasks in<br>Board</span>
+                        </div>
+                        <div class="summary-tasks" onclick="window.location.href='board.html'">
+                            <div id="summary-count-progress">0</div>
+                            <span>Tasks in<br>Progress</span>
+                        </div>
+                        <div class="summary-tasks" onclick="window.location.href='board.html'">
+                            <div id="summary-count-feedback">0</div>
+                            <span>Tasks in<br>Feedback</span>
+                        </div>
+                    </div>
+                    <div class="summary-urgency-date" onclick="window.location.href='board.html'">
+                        <div class="summary-urgency">
+                            <img src="./assets/img/icons/summary-urgency.svg" alt="summary urgent">
+                            <div class="summary-urgency-info">
+                                <div class="summary-urgency-number" id="summary-urgent-count">0</div>
+                                <div class="summary-urgency-name">Urgent</div>
+                            </div>
+                        </div>
+                        <div class="grey-line"></div>
+                        <div class="summary-date-deadline ">
+                            <div class="summary-date" id="summary-find-deadline">No Deadline found</div>
+                            <div class="summary-deadline">Upcoming Deadline</div>
+                        </div>
+                    </div>
+                    <div class="summary-to-do-done">
+                        <div class="summary-to-do" onclick="window.location.href='board.html'">
+                            <img class="summary-pencil-img" src="./assets/img/icons/summary-pencil.svg"
+                                alt="summary pencil">
+                            <img class="d-none" src="./assets/img/icons/summary-pencil-white.svg" alt="summary pencil">
+                            <div class="summary-to-do-done-sub">
+                                <div class="summary-to-do-done-sub-number" id="summary-to-do-count">0</div>
+                                <div class="summary-to-do-done-sub-name">To-do</div>
+                            </div>
+                        </div>
+                        <div class="summary-done" onclick="window.location.href='board.html'">
+                            <img class="summary-check-img" src="./assets/img/icons/summary-check.svg"
+                                alt="summary check">
+                            <img class="d-none" src="./assets/img/icons/summary-check-white.svg" alt="summary check">
+                            <div class="summary-to-do-done-sub">
+                                <div class="summary-to-do-done-sub-number" id="summary-done-count">0</div>
+                                <div class="summary-to-do-done-sub-name">Done</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="summary-welcome">
+                    <span class="summary-welcome-greeting" id="summary-greeting"></span>
+                    <span class="summary-welcome-name" id="summary-greeting-name"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="summary-welcome-responsive" id="summary-welcome-responsive">
+        <span class="summary-welcome-greeting summary-welcome-center" id="summary-greeting-responsive"></span>
+        <span class="summary-welcome-name summary-welcome-center" id="summary-greeting-name-responsive"></span>
+    </div>
+</body>
+
+</html>

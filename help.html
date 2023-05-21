@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/header.css">
+        <link rel="stylesheet" href="./styles/side-bar.css">
+        <link rel="stylesheet" href="./styles/help-legalnotice.css">
+        <link rel="stylesheet" href="./styles/style-media-header.css">
+        <link rel="stylesheet" href="./styles/style-media-side-bar.css">
+        <link rel="shortcut icon" type="image/x-icon" href="./assets/img/side-bar-join-logo.svg">
+        <title> Help | Join </title>
+        <script src="./mini_backend.js"></script>
+        <script src="./script/app.js"></script>
+    </head>
+    <body onload = "init()">
+        <div w3-include-html="./assets/templates/header-template.html"></div>
+        <div w3-include-html="./assets/templates/side-bar-template.html"></div>
+        <div class="legal-notice-help-main">
+            <div class="legal-notice-help-responsive-top">
+                <div class="legal-notice-help-sub-title">Kanban Project Management Tool</div>
+                <img class="legal-notice-help-back"src="./assets/img/icons/help-side-back.svg" alt="back" onclick="window.history.back()">    
+            </div>
+            <h1>Help</h1>
+            <h2>What is Join ? </h2>
+            <span>
+                Join is a classic task management tool with a Kanban board. You can organize your tasks within 
+                a project or business process, making it perfect for collaborating 
+                with your team. With Join, you and your team can work more efficiently, keeping all your tasks
+                in view and never missing a deadline. Start using Join now to improve your productivity!
+                In addition, Join offers an intuitive user interface. Whether you work alone or as part of a team, 
+                Join is an essential tool for anyone looking to manage their tasks effectively and efficiently.   
+            </span>
+            <h2>How to use it</h2>
+
+            <div class="help-list">
+                <div>
+                    With Join, you can effortlessly create and manage tasks. 
+                    Add a title, description, and category to specify your task, 
+                    and then assign it to other team members from your contact list or 
+                    invite new contacts to work together on the task.
+                </div>
+                <div>
+                    Check the current status of your tasks in the kanban-board. 
+                    You can drag and drop your task to change the status. 
+                    Also it is possible to edit the task details.
+                </div>
+                <div>
+                    Add team members to your contact list to communicate to them 
+                    fastly. Also you can assign tasks directly to your contacts.
+                    Having team members in your contact list also makes it easier to collaborate 
+                    with them on projects and stay organized by having all relevant contact 
+                    information in one place.
+                </div>
+            </div>
+
+    </body>
+</html>

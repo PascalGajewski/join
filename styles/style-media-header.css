@@ -1,0 +1,58 @@
+/* css - classes for header-template.html responsive*/
+@media (min-width: 1170px){
+
+    .header-help{
+        display:none;
+    }
+    
+    .header-legalnotice{
+        display:none;
+    }
+    .header-log-out:hover{
+        background-color: var(--focus-blue);
+    }
+}
+
+
+
+@media (max-width: 1170px) {
+
+    .header-titel{
+        display:none;
+    }
+
+    .header-log-out{
+        padding:0;
+        border: 2px solid white;
+    }
+  
+
+    .header-log-out > div {
+        padding-bottom: 9px;
+        padding-top: 9px;
+        padding-left:18px;
+    }
+
+    .header-help:hover{
+        border-radius: 20px 0px 0px 0px;
+    }
+
+    .header-log:hover{
+        border-radius: 0px 0px 20px 20px;
+    }
+
+
+    .header-help{
+        display:block;
+        padding-top: 18px;
+    }
+
+    .header-legalnotice{
+        display:block;
+    }
+   
+
+    .header-icon{
+        display: none;
+    }
+}

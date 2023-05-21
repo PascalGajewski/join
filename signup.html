@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style-login.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/side-bar-join-logo.svg">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Login | Join</title>
+    <script src="./mini_backend.js"></script>
+    <script src="./script/app.js"></script>
+    <script src="./script/login.js"></script>
+</head>
+
+<body onload="init()">
+    <div class="d-none send-confirm" id="send-new-signup-confirm">
+        <span class="w3-round-large">You signed up successfully.</span>
+    </div>
+    <div class="login-content">
+        <img src="./assets/img/icons/join-login.svg" class="join-logo" onclick="URL(index.html)">
+        <div class="login-card">
+            <a href="./index.html"><img src="./assets/img/icons/login-arrow-left.svg" class="login-arrow-left"></a>
+            <h1>Sign up</h1>
+            <div class="underline-headline"></div>
+            <form class="input-bar" onsubmit="addNewUser(); sendNewSignupConfirm(); return false" autocomplete="on">
+                <input required type="text" id="newusername" class="input-field name w3-round-large" placeholder="Name">
+                <input required type="email" id="newuseremail" class="input-field email w3-round-large" placeholder="Email">
+                <input required type="password" id="newuserpassword" class="input-field password w3-round-large" placeholder="Password">
+                <div class="btn-bar">
+                    <input type="submit" href="./summary.html" class="w3-button btn-dark-grey w3-round-large w3-hover-blue" value="Sign up">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+ /* css - classes for side-bar-template.html */
+ nav{
+    margin: 0;
+    padding: 0;
+ }
+ 
+ .side-bar {
+    height: 100vh;
+    background-color: var(--dark-grey);
+    color: white;
+    position: fixed;;
+    width: 232px;
+    top: 0px;
+    z-index: 2;
+}
+
+ .side-bar-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 66px 20px;
+    gap: 103px;
+    left: 0px;
+    top: 0px;
+    z-index:2;
+ }
+
+ .side-bar-logo{
+    height: 121.97px;
+    width: 100.03px;
+ }
+
+ .side-bar-navigation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 15px;
+    height: 229px;
+ }
+
+ .side-bar-button{
+   width: 232px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   padding: 8px 53px;
+   gap: 20px;
+   height: 46px;
+   box-sizing: border-box;
+}
+
+.side-bar-button:hover{
+   background-color: var(--focus-blue);
+}
+ 
+ .side-bar-navigation > div {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    cursor:pointer;
+ }
+
+ .side-bar-nav-icon-small{
+    height: 24px;
+    width: 24px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 4px;        
+ }
+ .side-bar-nav-icon{
+    height: 30px;
+    width: 30px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+ }
+
+ .side-bar-bottom{
+   width: 232px;
+   height: 289px;
+   display: flex;
+   align-items: end;
+ }
+
+ .side-bar-legal-notice{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   width: 232px;
+   height: 46px;
+   box-sizing: border-box;
+   gap: 20px;
+   align-items: center;
+   cursor: pointer;
+   padding: 8px 44px;
+   margin-bottom: 112.03px;
+ }
+
+ .side-bar-legal-notice:hover{
+   background-color: var(--focus-blue);
+ }
+
+ .side-bar-position{
+   background-color: var(--focus-blue);
+ }
+ 
+ 
+
+
+
+
+ 
+

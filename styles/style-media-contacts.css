@@ -1,0 +1,459 @@
+@media (max-width: 1400px) {
+  .contacts-titel {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1370px) {
+  h1 {
+    font-size: 47px;
+  }
+
+  h3 {
+    margin-top: 20px;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .contact-name {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .contacts-titel {
+    gap: 10px;
+  }
+
+  .contacts-titel > div {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .contact-name {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 1170px) {
+  .header-block {
+    display: block;
+  }
+  h3 {
+    margin: 0;
+  }
+  .deltitle {
+    margin-left: 46px;
+    font-size: 47px;
+    margin: 0;
+    margin-top: 132px;
+    margin-left: 46px;
+  }
+
+  . element.style {
+  }
+  .contacts-info-center-titel {
+    min-width: 200px;
+  }
+  user agent stylesheet div {
+    display: block;
+  }
+  .contacts-information-center {
+    height: unset;
+  }
+
+  .contacts-info-bottom-center {
+    margin-top: 0;
+  }
+  .contacts-add-contact-add-task {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  .contacts-include-tasks {
+    padding: 40px;
+  }
+
+  .contact-list-container {
+    margin-bottom: 80px;
+  }
+
+  .contacts-main {
+    margin-left: 0;
+  }
+
+  .contacts-container-left {
+    min-width: unset;
+    width: 100vw;
+  }
+  .contacts-addTask-close-add-task {
+    position: absolute;
+    height: 21.65px;
+    /* left: 1050.82px; */
+    right: 20px;
+    top: 110px;
+    cursor: pointer;
+  }
+
+  .contacts-letter-container {
+    margin: 0;
+    margin-top: 2px;
+  }
+
+  .contacts-fist-letter {
+    width: auto;
+  }
+
+  .contacts-container-btn-resp {
+    display: block;
+  }
+  .contacts-newcontact-btn-resp:hover {
+    border: 2px solid #29abe2;
+    background-color: #29abe2;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .contacts-titel-mobile {
+    display: flex;
+    flex-direction: column;
+    margin-top: 34.98px;
+    margin-left: 33px;
+  }
+
+  .contacts-sub-title-mobile {
+    margin-bottom: 19px;
+  }
+
+  .contacts-mobile-line {
+    margin-top: 10px;
+    width: 90px;
+    border: 3px solid var(--light-blue);
+  }
+
+  .contact-icon-mobile {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 3px solid #ffffff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .contacts-information-top {
+    margin-top: 0;
+    margin-left: 33px;
+    gap: 20px;
+  }
+
+  .contact-initals-big {
+    font-size: 27px;
+  }
+
+  .contact-info-top-right {
+    margin-top: 35px;
+  }
+
+  .contacts-information-center {
+    margin-left: 33px;
+  }
+
+  .contacts-edit {
+    display: none;
+  }
+
+  .contacts-information-bottom {
+    margin-left: 33px;
+  }
+
+  .btn-mobil-edit {
+    height: 40px;
+    width: 40px;
+    background-color: var(--dark-grey);
+    border-radius: 10px;
+    position: fixed;
+    bottom: 121px;
+    top: unset;
+    right: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-trash {
+    height: 40px;
+    width: 40px;
+    background-color: var(--dark-grey);
+    border-radius: 10px;
+    position: fixed;
+    bottom: 121px;
+    top: unset;
+    right: 70px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-trash:hover {
+    background-color: #29abe2;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .btn-mobil-edit:hover {
+    background-color: #29abe2;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .contacts-full {
+    display: none;
+  }
+
+  .contacts-white {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 19px;
+  }
+
+  .contacts-add-contact {
+    flex-direction: column;
+    max-width: 381px;
+    height: 761px;
+  }
+
+  .contacts-add-contact-left {
+    max-height: 351px;
+    max-width: 381px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 25px;
+    padding: 0;
+  }
+
+  .contacts-add-contact-right {
+    max-width: 381px;
+    flex-direction: column;
+    height: 761px;
+    overflow: visible;
+    margin-bottom: 32px;
+    position: relative;
+  }
+  .delete {
+    margin-left: unset;
+  }
+
+  .contacts-join-logo {
+    display: none;
+  }
+
+  .contacts-add-contact-left > h1 {
+    margin-left: 46px;
+    margin-top: 123px;
+  }
+
+  .contacts-add-contact-left > h3 {
+    margin-left: 46px;
+  }
+
+  .contacts-add-contact-left > hr {
+    margin: 0;
+    margin-left: 46px;
+    margin-bottom: 123px;
+  }
+
+  .contact-img {
+    width: 120px;
+    position: absolute;
+    left: 15%;
+    top: -85px;
+  }
+
+  .contacts-input-with-icon {
+    width: 327px;
+    height: 41px;
+    margin-left: 27px;
+  }
+
+  .contacts-btn-cancel {
+    display: none;
+  }
+
+  .form {
+    margin-top: 49px;
+    width: 381px;
+  }
+
+  .contacts-btn-container {
+    justify-content: center;
+  }
+
+  .contacts-btn-create-contact {
+    height: 51px;
+    width: 212px;
+  }
+
+  .contact-img {
+    z-index: 1;
+  }
+
+  .form-mobile {
+    margin-top: 49px;
+  }
+
+  .contacts-btn-save-contact {
+    margin-right: 0;
+  }
+
+  .contacts-btn-container-edit {
+    justify-content: center;
+  }
+
+  .contacts-white-edit {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 19px;
+    cursor: pointer;
+  }
+
+  .contacts-container-success {
+    top: -291px;
+    left: 8%;
+  }
+
+  .contacts-success {
+    border: 3px solid white;
+  }
+}
+
+@media (max-width: 460px) {
+  hr {
+    width: 100%;
+  }
+
+  .contacts-single-data {
+    width: 300px;
+  }
+
+  .contacts-first-letter {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 20px;
+  }
+
+  .contact-list-container {
+    margin: 0;
+    display: block;
+    margin-left: 36px;
+    margin-bottom: 80px;
+  }
+
+  .contacts-single-data {
+    width: 250px;
+  }
+
+  .contacts-letter-container {
+    width: 250px;
+  }
+  .contacts-container-left {
+    min-width: none;
+  }
+
+  .ontacts-add-contact-left {
+    position: relative;
+  }
+
+  .contacts-include-tasks {
+    margin-top: 40px;
+    padding: 4px;
+  }
+}
+
+@media (max-width: 383px) {
+  .contacts-add-contact {
+    width: unset;
+    min-width: unset;
+  }
+
+  .contacts-input-with-icon {
+    width: 300px;
+    margin-left: unset;
+    margin-right: unset;
+  }
+  .form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: unset;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .contacts-add-contact-left h1 {
+    margin-left: unset;
+  }
+
+  .contacts-add-contact-left h3 {
+    margin-left: unset;
+  }
+
+  .contacts-add-contact-left {
+    align-items: center;
+    max-width: unset;
+    width: unset !important;
+    max-height: 300px;
+  }
+  .contacts-white {
+    top: 37px;
+    right: 19px;
+  }
+
+  .contact-img {
+    left: 10%;
+  }
+
+  .contacts-add-contact-left > hr {
+    margin-right: 220px;
+  }
+}
+
+@media (max-width: 350px) {
+  .contact-list-container {
+    margin-left: 20px;
+  }
+
+  .contacts-details {
+    font-size: 19px;
+  }
+
+  .contacts-single-email {
+    font-size: 14px;
+  }
+
+  .contacts-single-data {
+    gap: 25px;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  .contacts-add-contact {
+    /* margin-top: 30px; */
+    height: 665px;
+  }
+  .contacts-add-contact-left {
+    max-height: 282px;
+    max-width: 381px;
+  }
+
+  @media only screen and (max-width: 290px) {
+    .contact-name {
+      font-size: 15px;
+    }
+  }
+}

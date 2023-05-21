@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/side-bar.css" />
+    <link rel="stylesheet" href="./styles/style-media-side-bar.css" />
+    <link rel="stylesheet" href="./styles/style-media-header.css" />
+    <link rel="stylesheet" href="./styles/style-contacts.css" />
+    <link rel="stylesheet" href="./styles/style-media-contacts.css" />
+    <link rel="stylesheet" href="./styles/style-add-task.css" />
+    <link rel="stylesheet" href="./styles/style-media-add-task.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./assets/img/side-bar-join-logo.svg"
+    />
+    <title>Contacts | Join</title>
+    <script src="./mini_backend.js"></script>
+    <script src="./script/app.js"></script>
+    <script src="./script/add-task-template.js"></script>
+    <script src="./script/contacts-templates.js"></script>
+    <script src="./script/add-task.js"></script>
+    <script src="./script/add-task-clear-create.js"></script>
+    <script src="./script/contacts.js"></script>
+  </head>
+
+  <body onload="initAddTask();">
+    <div w3-include-html="./assets/templates/header-template.html"></div>
+    <div w3-include-html="./assets/templates/side-bar-template.html"></div>
+
+    <div class="contacts-main">
+      <!-- Include Template Add Task -->
+      <div id="contacts-add-task" class="d-none">
+        <div class="contacts-overlay" onclick="closeAllPopups()">
+          <div
+            id="contacts-add-contact"
+            class="contacts-add-contact-add-task fadeInRightAlways"
+            onclick="doNotClose(event)"
+          >
+            <img
+              class="contacts-addTask-close-add-task"
+              onclick="contactsCloseAddTask()"
+              src="./assets/img/icons/contacs-x.svg"
+              onclick="contactsCloseAddTask()"
+              alt="X"
+            />
+            <div
+              class="contacts-include-tasks"
+              w3-include-html="./assets/templates/task-template.html"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <!-- RenderArea Edit Contact -->
+      <div id="contacts-popup-edit-Contact" class="d-none"></div>
+      <!-- RenderArea cantDelContact -->
+      <div id="contacts-popup-noDel-Contact" class="d-none"></div>
+      <!-- Static HTML - Add Contact -->
+      <div
+        id="contacts-popup-add-contact"
+        onclick="closeAllPopups()"
+        style="display: none"
+      >
+        <div
+          class="contacts-add-contact fadeInRight fadeInBottom"
+          onclick="doNotClose(event)"
+        >
+          <div class="contacts-add-contact-left">
+            <img
+              class="contacts-white"
+              src="./assets/img/icons/X-white.png"
+              onclick="contactsCancelNewContact()"
+              alt="X"
+            />
+            <img
+              class="contacts-join-logo"
+              src="./assets/img/side-bar-join-logo.svg"
+              alt="Join"
+            />
+            <h1>Add contact</h1>
+            <h3 class="contacts-400">Tasks are better with a team!</h3>
+            <hr class="contacts-hr" />
+          </div>
+          <div class="contacts-add-contact-right">
+            <img
+              class="contacts-full"
+              src="./assets/img/icons/contacs-x.svg"
+              onclick="contactsCancelNewContact()"
+              alt="X"
+            />
+            <div class="contacts-container-success">
+              <div id="contacts-success" class="contacts-success d-none">
+                Contact succesfully created
+              </div>
+            </div>
+            <div class="contact-img">
+              <img
+                src="./assets/img/icons/contacts-empty-icon.svg"
+                alt="newContact"
+              />
+            </div>
+            <form class="form" onsubmit="saveContact(); return false;">
+              <div class="contacts-input-with-icon">
+                <input
+                  id="contact-name"
+                  class="contact-input"
+                  type="text"
+                  required
+                  required
+                  pattern="[a-zA-ZäöüÄÖÜß]+\s[a-zA-ZäöüÄÖÜß]+"
+                  placeholder="Name"
+                  title="Gebe Deinen Vor- und Nachnamen an (2 Wörter)"
+                />
+                <span class="contacts-icon-name"></span>
+              </div>
+
+              <div class="contacts-input-with-icon">
+                <input
+                  id="contact-email"
+                  class="contacts-email contact-input"
+                  type="email"
+                  required
+                  placeholder="Email"
+                />
+                <span class="contacts-icon-email"></span>
+              </div>
+
+              <div class="contacts-input-with-icon">
+                <input
+                  id="contact-tel"
+                  class="contact-input"
+                  type="number"
+                  required
+                  placeholder="Phone"
+                  pattern="[0-9]+"
+                  title="Das Format sollte diesem Schema entsprechen: 012345678"
+                />
+                <span class="contacts-icon-phone"></span>
+              </div>
+
+              <div class="contacts-btn-container">
+                <button
+                  id="contacts-cancel"
+                  type="button"
+                  class="contacts-btn-cancel"
+                  formnovalidate
+                  onclick="contactsCancelNewContact()"
+                >
+                  Cancel
+                  <img
+                    class="contacts-img-cancel"
+                    src="./assets/img/icons/contacs-x.svg"
+                  />
+                  <img
+                    class="contacts-img-cancel-blue img-d-none"
+                    src="./assets/img/icons/add-task-button-clear-blue.svg"
+                    alt=""
+                  />
+                </button>
+                <button id="contacts-save" class="contacts-btn-create-contact">
+                  Create contact
+                  <img
+                    class="contacts-img-check"
+                    src="./assets/img/icons/contacts-check.svg"
+                  />
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="contacts-container-left" class="contacts-container-left">
+        <div class="contacts-container-btn-resp">
+          <div
+            id="contacts-newcontact-btn-resp"
+            class="contacts-newcontact-btn-resp"
+            onclick="contactsShowOverlayNew()"
+          >
+            <div>New contact</div>
+            <img
+              src="./assets/img/icons/conctacts-add-new-contact.icon.png"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <!-- Render-Area for Contact-List, Left Side -->
+        <div id="contacts-list" class="contact-list-container"></div>
+      </div>
+      <!-- Render-Area for mobile Contact Details - only display if triggert per button and screen smaller then 1070px -->
+      <div id="contacts-container-right-mobile" class="d-none"></div>
+      <!-- Contact Details - display only and screen bigger then 1070 px  -->
+      <div id="contacts-container-right" class="contacts-container-right">
+        <div class="contacts-titel">
+          <h1>Contacts</h1>
+          <div></div>
+          <h3>Better with a team</h3>
+        </div>
+        <!-- Render-Area for left Contact-Details - screen bigger then 1070px -->
+        <div id="contacts-user" class="contacts-information"></div>
+
+        <div
+          class="contacts-new-contact-button"
+          onclick="contactsShowOverlayNew()"
+        >
+          <div>New contact</div>
+          <img
+            src="./assets/img/icons/conctacts-add-new-contact.icon.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

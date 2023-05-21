@@ -1,0 +1,65 @@
+:root {
+  --dark-grey: #2A3647;
+  --focus-blue: #091931;
+  --light-white: #CDCDCD;
+  --light-grey: #F5F5F5;
+  --text-grey: #7B7B7C;
+  --btn-dark-grey: #2A3647;
+  --light-blue: #29ABE2;
+  --grey: #D1D1D1;
+
+  /* use: color: var(--beispielfarbe) */
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+  background-color: var(--light-grey);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 61px;
+
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 27px;
+}
+
+/* dimensions of the inner side area without header and sidebar */
+.main {
+  margin-top: 89px;
+  margin-left: 232px;
+}
+
+.d-none{
+  display:none;
+}
+
+/* Scrollbars */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #2A3647;;
+}
+
+
