@@ -4,7 +4,7 @@ let users = [];
 let activLogOutArea = false;
 const activePage = window.location.pathname; // get the current pathname from window.location
 setURL(
-  'https://gruppenarbeit-502-join.developerakademie.net/smallest_backend_ever'
+  'https://pascal-gajewski.developerakademie.net/smallest_backend_ever'
 );
 
 async function init() {

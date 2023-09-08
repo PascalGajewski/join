@@ -627,10 +627,6 @@ input[type=checkbox]:checked::before {
         gap: 5px !important;
     }
 
-    .board-button-box{
-
-    }
-
     .open-task-card::-webkit-scrollbar {
         display: none;
     }
