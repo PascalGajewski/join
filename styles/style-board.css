@@ -10,8 +10,6 @@
     overflow: hidden;
 }
 
-
-
 .board-content {
     display: flex;
     flex-direction: column;
@@ -80,6 +78,7 @@
     width: 25%;
     padding: 0 13px;
     min-height: 100%;
+    max-width: 400px;
 }
 
 .board-box-header {
@@ -530,6 +529,9 @@ input[type=checkbox]:checked::before {
 }
 
 @media screen and (max-width: 1000px) {
+    .board-content{
+        align-items: center;
+    }
     .board-header-bar {
         flex-direction: column;
         align-items: flex-start;
@@ -561,6 +563,7 @@ input[type=checkbox]:checked::before {
 
     .board-content-container {
         flex-direction: column;
+        width: unset;
     }
 
     .board-box {
