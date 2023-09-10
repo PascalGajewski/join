@@ -92,14 +92,6 @@ function closeAllPopups() {
 }
 
 /**
- * Function to avoid to call the closeAllPopup() Function for close all Popup Windows and Overlays.
- * @param {event} event - clickevent on a specific overlay element
- */
-function doNotClose(event) {
-  event.stopPropagation();
-}
-
-/**
  * Groups an array of contacts by their initials
  * @param {Array} contacts - An array of contact objects, each with a 'fullname' property
  * @returns {Map} A Map object with keys being the first letters of the fullnames (in uppercase),

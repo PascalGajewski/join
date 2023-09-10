@@ -186,3 +186,11 @@ function deleteAllCookies() {
     }
   }
 }
+
+/**
+ * Function to avoid to call the closeAllPopup() Function for close all Popup Windows and Overlays.
+ * @param {event} event - clickevent on a specific overlay element
+ */
+function doNotClose(event) {
+  event.stopPropagation();
+}
