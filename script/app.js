@@ -14,7 +14,9 @@ async function init() {
   users = (await JSON.parse(backend.getItem('users'))) || [];
   tasks = (await JSON.parse(backend.getItem('tasks'))) || [];
   categorys = (await JSON.parse(backend.getItem('categorys'))) || [];
-  handleWindowResize();
+  if(window.location.pathname == '/contacts.html'){
+    handleWindowResize();
+  }
   changeProfileImage();
 }
 /**
