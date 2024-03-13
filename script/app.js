@@ -3,9 +3,6 @@ let users = [];
 // main java-script file , side behavior an all pages, menue
 let activLogOutArea = false;
 const activePage = window.location.pathname; // get the current pathname from window.location
-setURL(
-  'https://pascal-gajewski.developerakademie.net/projects/join/smallest_backend_ever'  //!!! change if server location changed !!!!
-);
 
 async function init() {
   await includeHTML();
