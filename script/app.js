@@ -4,7 +4,7 @@ let users = [];
 let activLogOutArea = false;
 const activePage = window.location.pathname; // get the current pathname from window.location
 setURL(
-  'https://pascal-gajewski.developerakademie.net/smallest_backend_ever'
+  'https://pascal-gajewski.developerakademie.net/projects/join/smallest_backend_ever'  //!!! change if server location changed !!!!
 );
 
 async function init() {
@@ -14,7 +14,7 @@ async function init() {
   users = (await JSON.parse(backend.getItem('users'))) || [];
   tasks = (await JSON.parse(backend.getItem('tasks'))) || [];
   categorys = (await JSON.parse(backend.getItem('categorys'))) || [];
-  if(window.location.pathname == '/contacts.html'){
+  if(window.location.pathname == '/projects/join/contacts.html'){                       //!!! change if server location changed !!!!
     handleWindowResize();
   }
   changeProfileImage();

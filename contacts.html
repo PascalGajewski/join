@@ -4,33 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/header.css" />
-    <link rel="stylesheet" href="./styles/side-bar.css" />
-    <link rel="stylesheet" href="./styles/style-media-side-bar.css" />
-    <link rel="stylesheet" href="./styles/style-media-header.css" />
-    <link rel="stylesheet" href="./styles/style-contacts.css" />
-    <link rel="stylesheet" href="./styles/style-media-contacts.css" />
-    <link rel="stylesheet" href="./styles/style-add-task.css" />
-    <link rel="stylesheet" href="./styles/style-media-add-task.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/side-bar.css" />
+    <link rel="stylesheet" href="styles/style-media-side-bar.css" />
+    <link rel="stylesheet" href="styles/style-media-header.css" />
+    <link rel="stylesheet" href="styles/style-contacts.css" />
+    <link rel="stylesheet" href="styles/style-media-contacts.css" />
+    <link rel="stylesheet" href="styles/style-add-task.css" />
+    <link rel="stylesheet" href="styles/style-media-add-task.css" />
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="./assets/img/side-bar-join-logo.svg"
+      href="assets/img/side-bar-join-logo.svg"
     />
     <title>Contacts | Join</title>
-    <script src="./mini_backend.js"></script>
-    <script src="./script/app.js"></script>
-    <script src="./script/add-task-template.js"></script>
-    <script src="./script/contacts-templates.js"></script>
-    <script src="./script/add-task.js"></script>
-    <script src="./script/add-task-clear-create.js"></script>
-    <script src="./script/contacts.js"></script>
+    <script src="mini_backend.js"></script>
+    <script src="script/app.js"></script>
+    <script src="script/add-task-template.js"></script>
+    <script src="script/contacts-templates.js"></script>
+    <script src="script/add-task.js"></script>
+    <script src="script/add-task-clear-create.js"></script>
+    <script src="script/contacts.js"></script>
   </head>
 
   <body onload="initAddTask();">
-    <div w3-include-html="./assets/templates/header-template.html"></div>
-    <div w3-include-html="./assets/templates/side-bar-template.html"></div>
+    <div w3-include-html="assets/templates/header-template.html"></div>
+    <div w3-include-html="assets/templates/side-bar-template.html"></div>
 
     <div class="contacts-main">
       <!-- Include Template Add Task -->
@@ -44,13 +44,13 @@
             <img
               class="contacts-addTask-close-add-task"
               onclick="contactsCloseAddTask()"
-              src="./assets/img/icons/contacs-x.svg"
+              src="assets/img/icons/contacs-x.svg"
               onclick="contactsCloseAddTask()"
               alt="X"
             />
             <div
               class="contacts-include-tasks"
-              w3-include-html="./assets/templates/task-template.html"
+              w3-include-html="assets/templates/task-template.html"
             ></div>
           </div>
         </div>
@@ -72,13 +72,13 @@
           <div class="contacts-add-contact-left">
             <img
               class="contacts-white"
-              src="./assets/img/icons/X-white.png"
+              src="assets/img/icons/X-white.png"
               onclick="contactsCancelNewContact()"
               alt="X"
             />
             <img
               class="contacts-join-logo"
-              src="./assets/img/side-bar-join-logo.svg"
+              src="assets/img/side-bar-join-logo.svg"
               alt="Join"
             />
             <h1>Add contact</h1>
@@ -88,7 +88,7 @@
           <div class="contacts-add-contact-right">
             <img
               class="contacts-full"
-              src="./assets/img/icons/contacs-x.svg"
+              src="assets/img/icons/contacs-x.svg"
               onclick="contactsCancelNewContact()"
               alt="X"
             />
@@ -99,7 +99,7 @@
             </div>
             <div class="contact-img">
               <img
-                src="./assets/img/icons/contacts-empty-icon.svg"
+                src="assets/img/icons/contacts-empty-icon.svg"
                 alt="newContact"
               />
             </div>
@@ -153,11 +153,11 @@
                   Cancel
                   <img
                     class="contacts-img-cancel"
-                    src="./assets/img/icons/contacs-x.svg"
+                    src="assets/img/icons/contacs-x.svg"
                   />
                   <img
                     class="contacts-img-cancel-blue img-d-none"
-                    src="./assets/img/icons/add-task-button-clear-blue.svg"
+                    src="assets/img/icons/add-task-button-clear-blue.svg"
                     alt=""
                   />
                 </button>
@@ -165,7 +165,7 @@
                   Create contact
                   <img
                     class="contacts-img-check"
-                    src="./assets/img/icons/contacts-check.svg"
+                    src="assets/img/icons/contacts-check.svg"
                   />
                 </button>
               </div>
@@ -183,7 +183,7 @@
           >
             <div>New contact</div>
             <img
-              src="./assets/img/icons/conctacts-add-new-contact.icon.png"
+              src="assets/img/icons/conctacts-add-new-contact.icon.png"
               alt=""
             />
           </div>
@@ -210,7 +210,7 @@
         >
           <div>New contact</div>
           <img
-            src="./assets/img/icons/conctacts-add-new-contact.icon.png"
+            src="assets/img/icons/conctacts-add-new-contact.icon.png"
             alt=""
           />
         </div>

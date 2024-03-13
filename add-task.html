@@ -5,28 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/fonts.css">
-    <link rel="stylesheet" href="./styles/style-summary.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/header.css">
-    <link rel="stylesheet" href="./styles/side-bar.css">
-    <link rel="stylesheet" href="./styles/style-add-task.css">
-    <link rel="stylesheet" href="./styles/style-media-add-task.css">
-    <link rel="stylesheet" href="./styles/style-media-header.css">
-    <link rel="stylesheet" href="./styles/style-media-side-bar.css">
-    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/side-bar-join-logo.svg">
-    <script src="./mini_backend.js"></script>
-    <script src="./script/app.js"></script>
-    <script src="./script/add-task-template.js"></script>
-    <script src="./script/add-task.js"></script>
-    <script src="./script/add-task-clear-create.js"></script>
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/style-summary.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/side-bar.css">
+    <link rel="stylesheet" href="styles/style-add-task.css">
+    <link rel="stylesheet" href="styles/style-media-add-task.css">
+    <link rel="stylesheet" href="styles/style-media-header.css">
+    <link rel="stylesheet" href="styles/style-media-side-bar.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/side-bar-join-logo.svg">
+    <script src="mini_backend.js"></script>
+    <script src="script/app.js"></script>
+    <script src="script/add-task-template.js"></script>
+    <script src="script/add-task.js"></script>
+    <script src="script/add-task-clear-create.js"></script>
 
     <title>Add Task | Join</title>
 </head>
 
 <body onload="initAddTask()">
-    <div w3-include-html="./assets/templates/header-template.html"></div>
-    <div w3-include-html="./assets/templates/side-bar-template.html"></div>
+    <div w3-include-html="assets/templates/header-template.html"></div>
+    <div w3-include-html="assets/templates/side-bar-template.html"></div>
 
     <div class="add-task-main-content">
         <div class="add-task-media">
@@ -99,17 +99,17 @@
                             <button id="add-task-clear-button" type="reset" class="add-task-clear"
                                 onclick="clearAddTask()">
                                 Clear
-                                <img class="add-task-clear-img" src="./assets/img/icons/add-task-button-clear.svg"
+                                <img class="add-task-clear-img" src="assets/img/icons/add-task-button-clear.svg"
                                     alt="cross">
-                                <img class="d-none" src="./assets/img/icons/add-task-button-clear-blue.svg" alt="cross">
+                                <img class="d-none" src="assets/img/icons/add-task-button-clear-blue.svg" alt="cross">
                             </button>
                             <button class="add-task-create" id="add-task-create-button">
                                 Create Task
-                                <img src="./assets/img/icons/add-task-button-create.svg" alt="check">
+                                <img src="assets/img/icons/add-task-button-create.svg" alt="check">
                             </button>
                             <button class="add-task-create-media" id="add-task-create-button-media">
                                 Create
-                                <img src="./assets/img/icons/add-task-button-create.svg" alt="check">
+                                <img src="assets/img/icons/add-task-button-create.svg" alt="check">
                             </button>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                     <div class="add-task-added d-none" id="add-task-added">
                         <div class="add-task-added-content">
                             <span>Task added to board</span>
-                            <img src="./assets/img/icons/add-task-added-board.svg" alt="board">
+                            <img src="assets/img/icons/add-task-added-board.svg" alt="board">
                         </div>
                     </div>
                 </div>
